@@ -4,6 +4,9 @@ const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const multer = require('multer');
 const path = require('path');
+const cors = require('cors');
+
+app.use(cors());
 
 // import routes
 const authRoute = require('./routes/auth');
