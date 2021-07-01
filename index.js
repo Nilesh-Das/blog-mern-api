@@ -15,6 +15,9 @@ const categoryRoute = require("./routes/categories");
 dotenv.config();
 app.use(express.json());
 app.use("/images", express.static(path.join(__dirname, "/images")));
+app.get("/", (req, res) => {
+  res.send('Hello to Seaborg Blog API')
+})
 const PORT = process.env.PORT || 5000;
 
 // connect to mongodb
